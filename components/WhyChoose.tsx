@@ -58,7 +58,7 @@ export default function WhyChoose() {
     <section className="bg-white py-16 px-4 w-full">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-[#0F7CDC] mb-12">
-          Why Choose <span className="text-[#3DCF30]">JEET</span>{' '}
+          Why Choose <span className="text-[#3DCF30] hover:text-[#0F7CDC]">JEET</span>{' '}
           <span className="text-[#0F7CDC]">SARTHI Mentorship?</span>
         </h2>
 

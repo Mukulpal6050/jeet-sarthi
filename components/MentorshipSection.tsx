@@ -45,9 +45,9 @@ const MentorshipSection: React.FC = () => {
     <section className="w-full py-16 bg-white text-center font-[Poppins] relative overflow-hidden">
       {/* ✅ Heading */}
       <h2 className="text-3xl md:text-4xl font-semibold mb-16 leading-snug text-[#005EB8]">
-        How{" "}
+        How{" "}J
         <span className="text-[#74C043] font-bold hover:text-[#005EB8]">
-          JEET
+          EET
         </span>{" "}
         SARTHI Mentorship Works?
       </h2>
@@ -114,20 +114,25 @@ const MentorshipSection: React.FC = () => {
         </div>
       </div>
 
-      {/* ✅ Mobile Vertical Timeline — perfect alignment */}
-      <div className="md:hidden relative flex flex-col items-start pl-8 mt-10">
-        {/* Vertical green line passing through dots */}
-        <div className="absolute left-[22px] top-[-20px] bottom-[-20px] w-[3px] bg-[#00A651]" />
+
+      {/* ✅ Mobile Vertical Timeline — perfectly centered line */}
+      {/* ✅ Mobile Vertical Timeline — flex-based perfect alignment */}
+      <div className="md:hidden relative flex flex-col mt-10">
+        {/* Line running through all dots */}
+        <div className="absolute left-[32px] top-0 bottom-0 w-[3px] bg-[#00A651]" />
 
         {[...topSteps, ...bottomSteps].map((step, index) => (
-          <div key={index} className="relative flex items-start mb-10">
-            {/* Dot centered on the line */}
-            <div className="absolute left-[15px] top-4 w-5 h-5 rounded-full bg-[#00A651] flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#005EB8]" />
+          <div key={index} className="relative flex items-start mb-12">
+            {/* Left column: dot + line alignment */}
+            <div className="relative flex flex-col items-center w-16">
+              {/* Dot perfectly centered on line */}
+              <div className="w-5 h-5 rounded-full bg-[#00A651] flex items-center justify-center z-10">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#005EB8]" />
+              </div>
             </div>
 
-            {/* Step content */}
-            <div className="ml-12 flex flex-col items-start text-left">
+            {/* Right column: step content */}
+            <div className="flex flex-col items-start text-left">
               <Image
                 src={step.img}
                 alt={step.title}
@@ -144,8 +149,12 @@ const MentorshipSection: React.FC = () => {
         ))}
       </div>
 
+
+
+
+
       {/* ✅ CTA Button */}
-      <button className="mt-16 bg-[#0F7CDC] hover:bg-[#0d6bc2] text-white font-semibold px-8 py-3 rounded-md shadow-md transition">
+      <button className="mt-16 bg-[#0F7CDC] hover:bg-[#3DCF30] text-white font-semibold px-8 py-3 rounded-md shadow-md transition">
         Enroll For Mentorship
       </button>
     </section>
